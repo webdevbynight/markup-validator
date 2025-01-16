@@ -18,6 +18,7 @@
   "engines": {
     "node": ">= 18.20.5"
   },
+  "main": "./dist/index.js",
   "scripts": {
     "biome": "biome check --write .",
     "biome:check": "biome check .",
@@ -25,10 +26,12 @@
     "biome:format:check": "biome format .",
     "biome:lint": "biome lint --write .",
     "biome:lint:check": "biome lint .",
+    "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
     "build": "tsc",
     "prepare": "husky"
   },
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.17.3",
     "@biomejs/biome": "1.9.4",
     "git-format-staged": "3.1.1",
     "husky": "^9.1.7",
