@@ -27,5 +27,11 @@
   "license": "MIT",
   "engines": {
     "node": ">= 18.20.5"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3"
   }
 }
