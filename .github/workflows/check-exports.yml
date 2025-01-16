@@ -3,7 +3,7 @@ name: Check exports
 on: pull_request
 
 jobs:
-  quality:
+  check-exports:
     name: Check exports
     runs-on: ubuntu-latest
     steps:
