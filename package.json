@@ -1,0 +1,31 @@
+{
+  "name": "markup-validator",
+  "version": "0.0.0",
+  "description": "Check the markup validity of HTML, CSS, SVG and XML files using the W3C validator",
+  "keywords": [
+    "css",
+    "css3",
+    "html",
+    "html5",
+    "markup",
+    "svg",
+    "validator",
+    "w3c",
+    "xml"
+  ],
+  "homepage": "https://github.com/webdevbynight/markup-validator.git",
+  "bugs": {
+    "url": "https://github.com/webdevbynight/markup-validator/issues"
+  },
+  "author": "Victor Brito (https://victor-brito.dev)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/webdevbynight/markup-validator.git"
+  },
+  "files": ["dist"],
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 18.20.5"
+  }
+}
