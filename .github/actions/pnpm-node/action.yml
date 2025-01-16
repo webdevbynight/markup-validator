@@ -1,6 +1,6 @@
 name: Install pnpm and setup Node.js
 
-run:
+runs:
   using: "composite"
   steps:
     - name: Install pnpm
