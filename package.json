@@ -20,8 +20,11 @@
   },
   "scripts": {
     "biome": "biome check --write .",
+    "biome:check": "biome check .",
     "biome:format": "biome format --write .",
+    "biome:format:check": "biome format .",
     "biome:lint": "biome lint --write .",
+    "biome:lint:check": "biome lint .",
     "build": "tsc",
     "prepare": "husky"
   },
