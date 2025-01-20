@@ -26,9 +26,11 @@
     "biome:format:check": "biome format .",
     "biome:lint": "biome lint --write .",
     "biome:lint:check": "biome lint .",
-    "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
     "build": "tsc",
+    "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
+    "dev": "pnpm tsc:watch & pnpm test:watch",
     "prepare": "husky",
+    "tsc:watch": "tsc --watch --preserveWatchOutput",
     "test": "vitest run",
     "test:watch": "vitest"
   },
