@@ -19,5 +19,7 @@
     "sourceMap": true,
     "declaration": true,
     "lib": ["ES2023"]
-  }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["test/**/**", "node_modules"]
 }
