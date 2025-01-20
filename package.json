@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Check the markup validity of HTML, CSS, SVG and XML files using the W3C validator",
   "keywords": ["css", "css3", "html", "html5", "markup", "svg", "validator", "w3c", "xml"],
-  "homepage": "https://github.com/webdevbynight/markup-validator.git",
+  "homepage": "https://github.com/webdevbynight/markup-validator",
   "bugs": {
     "url": "https://github.com/webdevbynight/markup-validator/issues"
   },
