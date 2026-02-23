@@ -5,6 +5,8 @@
  */
 export const patternToRegex = (pattern: string): RegExp => {
   const regex = pattern
+    .replace(/\\/g, "\\\\")
+    .replace(/\//g, "\\/")
     .replace(/\./g, "\\.")
     .replace(/\*{2}/g, ".*")
     .replace(/(?<!\.)\*/g, "[^/]*");
