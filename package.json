@@ -1,0 +1,68 @@
+{
+  "name": "markup-validator",
+  "version": "0.0.0",
+  "description": "Check the markup validity of HTML, CSS and SVG files using the W3C validator",
+  "keywords": [
+    "css",
+    "css3",
+    "html",
+    "html5",
+    "markup",
+    "svg",
+    "validator",
+    "w3c"
+  ],
+  "homepage": "https://github.com/webdevbynight/markup-validator",
+  "bugs": {
+    "url": "https://github.com/webdevbynight/markup-validator/issues"
+  },
+  "author": "Victor Brito (https://victor-brito.dev)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webdevbynight/markup-validator.git"
+  },
+  "type": "module",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "import": "./dist/index.js",
+    "types": "./dist/index.d.ts"
+  },
+  "engines": {
+    "node": "^20.18.3 || ^22.12.0 || ^24.0.0",
+    "npm": ">=10.8.2",
+    "pnpm": ">=10.28.2"
+  },
+  "scripts": {
+    "biome": "biome check --write .",
+    "biome:check": "biome check .",
+    "biome:format": "biome format --write .",
+    "biome:format:check": "biome format .",
+    "biome:lint": "biome lint --write .",
+    "biome:lint:check": "biome lint .",
+    "build": "tsc",
+    "dev": "pnpm tsc:watch & pnpm test:watch",
+    "prepare": "husky",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "tsc:watch": "tsc --watch --preserveWatchOutput"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.4",
+    "@commitlint/cli": "20.4.2",
+    "@commitlint/config-conventional": "20.4.2",
+    "@release-change/cli": "0.1.5",
+    "@types/node": "24.10.13",
+    "husky": "9.1.7",
+    "typescript": "5.9.3",
+    "vitest": "4.0.18"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@biomejs/biome",
+      "esbuild"
+    ]
+  }
+}

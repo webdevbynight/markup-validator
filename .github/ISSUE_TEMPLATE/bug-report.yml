@@ -1,0 +1,67 @@
+name: Bug report
+description: Help improve this repository by filing a detailed bug report.
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug description
+      description: Provide a clear and concise description of the issue or unexpected behaviour.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Provide a detailed, step-by-step guide on how to reproduce the issue. Include code snippets or links to repositories if applicable.
+      placeholder: |
+        1. This is the first step.
+        2. This is the second step, etc.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+      description: Provide a detailed explanation of what you expected to happen instead of the observed issue. Be as specific as possible.
+    validations:
+      required: true
+  - type: input
+    id: project-version
+    attributes:
+      label: markup-validator version
+      description: The version of markup-validator you are using (“Latest” is not a valid response).
+      placeholder: 1.0.0
+    validations:
+      required: true
+  - type: input
+    id: node-version
+    attributes:
+      label: Node.js version
+      description: The version of Node.js you are using (please check the [versions supported](https://github.com/webdevbynight/markup-validator/blob/main/SECURITY.md#supported-nodejs-versions)).
+      placeholder: 22.0.0
+    validations:
+      required: true
+  - type: input
+    id: package-manager-version
+    attributes:
+      label: npm / pnpm version
+      description: The version of npm / pnpm you are using (please check the [versions supported](https://github.com/webdevbynight/markup-validator/blob/main/SECURITY.md#supported-package-manager-versions)).
+      placeholder: pnpm 10.7.0
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log / error output
+      description: Copy and paste any relevant log output. No need for backticks, as this will be automatically formatted into code.
+      render: shell
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Confirmation Checklist
+      options:
+        - label: I agree to follow this project’s [Code of Conduct](https://github.com/webdevbynight/markup-validator/blob/main/CODE_OF_CONDUCT.md).
+          required: true
+        - label: I have checked the existing [issues](https://github.com/webdevbynight/markup-validator/issues) for duplicates.
+          required: true
