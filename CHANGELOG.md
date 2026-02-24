@@ -1,5 +1,15 @@
 # markup-validator
 
+## 0.1.1
+
+### Patch changes
+
+- **ci:** add build step ([`d0db0a5`](https://github.com/webdevbynight/markup-validator/commit/d0db0a592e0ea20aa4c1088a7c27c2e4f11503d4))
+
+---
+
+**Full changelog:** [`v0.1.0...v0.1.1`](https://github.com/webdevbynight/markup-validator/compare/v0.1.0...v0.1.1)
+
 ## 0.1.0
 
 ### Minor changes
