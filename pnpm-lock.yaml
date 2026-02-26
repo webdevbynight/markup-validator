@@ -18,8 +18,8 @@ importers:
         specifier: 20.4.2
         version: 20.4.2
       '@release-change/cli':
-        specifier: 0.1.5
-        version: 0.1.5
+        specifier: 0.3.0
+        version: 0.3.0
       '@types/node':
         specifier: 24.10.13
         version: 24.10.13
@@ -332,9 +332,9 @@ packages:
     resolution: {integrity: sha512-UXuoRZDC59z/AHnChvzFaeonrBKFBZjLRjbYN/QT44EWSXqRVKwunbhJNfyZ8H6FouE6zvkyiLRQdLR1EYKD0A==}
     engines: {node: ^20.18.3 || ^22.12.0 || ^24.0.0, npm: '>=10.8.2', pnpm: '>=10.28.0'}
 
-  '@release-change/cli@0.1.5':
-    resolution: {integrity: sha512-07MF56gkqNe9FZ4HfYzQ0j6ygGNaj74c8TrTTMsqDqcOfpN6ZhZinqXuQ6lmIVXwyUisMN970NTeB7UrVo/iSA==}
-    engines: {node: ^20.18.3 || ^22.12.0 || ^24.0.0, npm: '>=10.8.2', pnpm: '>=10.28.0'}
+  '@release-change/cli@0.3.0':
+    resolution: {integrity: sha512-rVIzEaQVLa/tMlkrJOLtBBJPzHnNhMqYuWktwlijTEl9SHuTEamFG6uXVgOmkgMxszdL5N5pzwqy263tO1++Hg==}
+    engines: {node: ^20.18.3 || ^22.12.0 || ^24.0.0, npm: '>=10.8.2', pnpm: '>=10.30.2'}
     hasBin: true
 
   '@release-change/commit-analyser@0.1.3':
@@ -349,9 +349,9 @@ packages:
     resolution: {integrity: sha512-tvWadeBTJYgR0VDbj2ov4wjDWMTjn9AnTKzYcrulusTsDiO2SLbBQsIpgq+x5gvHmMw5cxlHl41cStZZpoUFiw==}
     engines: {node: ^20.18.3 || ^22.12.0 || ^24.0.0, npm: '>=10.8.2', pnpm: '>=10.28.0'}
 
-  '@release-change/git@0.1.4':
-    resolution: {integrity: sha512-KFgDb7wgOu3izN/6zRrV7BjkJXZo8O0DckSnZvJLk64VPZ/cM/8lsU/95/eLQ71RV4nQjwWQ5EHEphW9B8j26w==}
-    engines: {node: ^20.18.3 || ^22.12.0 || ^24.0.0, npm: '>=10.8.2', pnpm: '>=10.28.0'}
+  '@release-change/git@0.2.0':
+    resolution: {integrity: sha512-AmYXvx/XjhfzhtAX4u3UhGFo0jm4hAFVLIIB+txRckqdsvVjWVG74GeXP4sLiNe1kS9d/XM7CRFcsEDQP2LOtA==}
+    engines: {node: ^20.18.3 || ^22.12.0 || ^24.0.0, npm: '>=10.8.2', pnpm: '>=10.30.2'}
 
   '@release-change/github@0.1.4':
     resolution: {integrity: sha512-WP0w38YS95BdZjdxFGW+fvkcJKIX5EPYnzRwuEGOLUG6v0T80az2tjC23r/jj49pZCcz2d2lWaniQ7irwibbCQ==}
@@ -365,13 +365,13 @@ packages:
     resolution: {integrity: sha512-XO2IBzX65LAokGiIbVo1svxAGOU+2EVhyVOpcQ58+5wSCkU7hg1wPaPebu3PSJATS8LTyqkpFDkteLtHtgPIIA==}
     engines: {node: ^20.18.3 || ^22.12.0 || ^24.0.0, npm: '>=10.8.2', pnpm: '>=10.28.0'}
 
-  '@release-change/release-notes-generator@0.1.4':
-    resolution: {integrity: sha512-QBjxKCj04CBOX6ZIoU5bMxldaUSxhihs/aquROcoInk3gSHzj/jMxITWZddPlwEqpggLxYeWl8escDaNQXVqvQ==}
-    engines: {node: ^20.18.3 || ^22.12.0 || ^24.0.0, npm: '>=10.8.2', pnpm: '>=10.28.0'}
+  '@release-change/release-notes-generator@0.1.5':
+    resolution: {integrity: sha512-tG9yg0vBWDV811UwIFIWsL5nlzsjgvCtKFUOL9W6fBPqSLJ2PqP70UNINx6z/qGB41MTCgoNiN9kbhAfapxDWQ==}
+    engines: {node: ^20.18.3 || ^22.12.0 || ^24.0.0, npm: '>=10.8.2', pnpm: '>=10.30.2'}
 
-  '@release-change/release@0.1.5':
-    resolution: {integrity: sha512-cy7s0wn9B1KSlKlr2/9Esj5kssbiTA+flluXVBb4nA3os5+yCZGImqWnImVR96carF94ZJoEee1pfz0cYRVb7Q==}
-    engines: {node: ^20.18.3 || ^22.12.0 || ^24.0.0, npm: '>=10.8.2', pnpm: '>=10.28.0'}
+  '@release-change/release@0.2.0':
+    resolution: {integrity: sha512-DaAdGSOqRt1yS7GdF7DCAGyzJgnsGIAzQKFczZ38MO6ifgQmB5MujVN/Xhi+NoiE11c2AOsU4byCVKayaujt3Q==}
+    engines: {node: ^20.18.3 || ^22.12.0 || ^24.0.0, npm: '>=10.8.2', pnpm: '>=10.30.2'}
 
   '@release-change/semver@0.1.0':
     resolution: {integrity: sha512-xMMNsJEJaZNyOOh2rvs2W4Nyw50Tw+est0p8KqiPImtsbe8cjTrBqdI16zzi5sjZJQU3IRfD/qLW1fdV3OafxA==}
@@ -1228,16 +1228,16 @@ snapshots:
       '@release-change/logger': 0.1.2
       '@release-change/shared': 0.1.2
 
-  '@release-change/cli@0.1.5':
+  '@release-change/cli@0.3.0':
     dependencies:
       '@release-change/ci': 0.1.2
       '@release-change/commit-analyser': 0.1.3
       '@release-change/config': 0.1.2
       '@release-change/get-packages': 0.1.2
-      '@release-change/git': 0.1.4
+      '@release-change/git': 0.2.0
       '@release-change/github': 0.1.4
       '@release-change/logger': 0.1.2
-      '@release-change/release': 0.1.5
+      '@release-change/release': 0.2.0
       '@release-change/semver': 0.1.0
       '@release-change/shared': 0.1.2
 
@@ -1259,7 +1259,7 @@ snapshots:
       '@release-change/logger': 0.1.2
       '@release-change/shared': 0.1.2
 
-  '@release-change/git@0.1.4':
+  '@release-change/git@0.2.0':
     dependencies:
       '@release-change/commit-analyser': 0.1.3
       '@release-change/logger': 0.1.2
@@ -1285,7 +1285,7 @@ snapshots:
       '@release-change/logger': 0.1.2
       '@release-change/shared': 0.1.2
 
-  '@release-change/release-notes-generator@0.1.4':
+  '@release-change/release-notes-generator@0.1.5':
     dependencies:
       '@release-change/ci': 0.1.2
       '@release-change/commit-analyser': 0.1.3
@@ -1294,16 +1294,16 @@ snapshots:
       '@release-change/logger': 0.1.2
       '@release-change/shared': 0.1.2
 
-  '@release-change/release@0.1.5':
+  '@release-change/release@0.2.0':
     dependencies:
       '@release-change/commit-analyser': 0.1.3
       '@release-change/config': 0.1.2
       '@release-change/get-packages': 0.1.2
-      '@release-change/git': 0.1.4
+      '@release-change/git': 0.2.0
       '@release-change/github': 0.1.4
       '@release-change/logger': 0.1.2
       '@release-change/npm': 0.1.2
-      '@release-change/release-notes-generator': 0.1.4
+      '@release-change/release-notes-generator': 0.1.5
       '@release-change/semver': 0.1.0
       '@release-change/shared': 0.1.2
 
