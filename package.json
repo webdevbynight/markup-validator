@@ -30,6 +30,9 @@
     "import": "./dist/index.js",
     "types": "./dist/index.d.ts"
   },
+  "bin": {
+    "markup-validator": "./bin/cli.js"
+  },
   "engines": {
     "node": "^20.18.3 || ^22.12.0 || ^24.0.0",
     "npm": ">=10.8.2",
