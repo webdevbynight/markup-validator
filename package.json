@@ -1,6 +1,6 @@
 {
   "name": "markup-validator",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Check the markup validity of HTML, CSS and SVG files using the W3C validator",
   "keywords": [
     "css",

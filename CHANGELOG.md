@@ -1,5 +1,15 @@
 # markup-validator
 
+## 0.2.0
+
+### Minor changes
+
+- implement running from CLI ([`80b0050`](https://github.com/webdevbynight/markup-validator/commit/80b005017155bfaa3070a94024e951078d8f97c3))
+
+---
+
+**Full changelog:** [`v0.1.1...v0.2.0`](https://github.com/webdevbynight/markup-validator/compare/v0.1.1...v0.2.0)
+
 ## 0.1.1
 
 ### Patch changes
