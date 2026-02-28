@@ -4,17 +4,14 @@ import path from "node:path";
 /**
  * Browses the folders recursively from the given folder.
  * @param folder - The folder from which to start the browsing.
- * @return An array of all the directories found recursively.
+ * @return An array of all the directories found recursively, including the given folder.
  */
 export const browseFolders = async (folder: string): Promise<string[]> => {
   const entries = (await fs.readdir(folder, { withFileTypes: true })).map(async entry => {
     const pathToEntry = path.join(folder, entry.name);
-    if (entry.isDirectory()) {
-      const subDirectories = await browseFolders(pathToEntry);
-      return [pathToEntry, ...subDirectories];
-    }
+    if (entry.isDirectory()) return await browseFolders(pathToEntry);
     return [];
   });
   const directories = await Promise.all(entries);
-  return directories.flat();
+  return [folder, ...directories.flat()];
 };
