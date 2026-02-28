@@ -26,9 +26,9 @@ const mockedDirent = {
   }
 };
 
-it("should return an empty array if the folder is empty", async () => {
+it("should return only the folder itself if the folder is empty", async () => {
   vi.spyOn(fs, "readdir").mockResolvedValue([]);
-  expect(await browseFolders(mockedCwd)).toStrictEqual([]);
+  expect(await browseFolders(mockedCwd)).toStrictEqual([mockedCwd]);
 });
 it("should browse folders recursively", async () => {
   vi.spyOn(fs, "readdir").mockImplementation(async dirPath => {
@@ -48,32 +48,33 @@ it("should browse folders recursively", async () => {
         }
       ];
     }
-    if (dirPath === "/fake/path/folder1") {
+    if (dirPath === `${mockedCwd}/folder1`) {
       return [
         {
           ...mockedDirent,
           name: "subfolder1" as unknown as Buffer<ArrayBuffer>,
           isDirectory: () => true,
-          parentPath: "/fake/path/folder1"
+          parentPath: `${mockedCwd}/folder1`
         }
       ];
     }
-    if (dirPath === "/fake/path/folder2") {
+    if (dirPath === `${mockedCwd}/folder2`) {
       return [
         {
           ...mockedDirent,
           name: "subfolder2" as unknown as Buffer<ArrayBuffer>,
           isDirectory: () => true,
-          parentPath: "/fake/path/folder2"
+          parentPath: `${mockedCwd}/folder2`
         }
       ];
     }
     return [];
   });
   expect(await browseFolders(mockedCwd)).toStrictEqual([
-    "/fake/path/folder1",
-    "/fake/path/folder1/subfolder1",
-    "/fake/path/folder2",
-    "/fake/path/folder2/subfolder2"
+    mockedCwd,
+    `${mockedCwd}/folder1`,
+    `${mockedCwd}/folder1/subfolder1`,
+    `${mockedCwd}/folder2`,
+    `${mockedCwd}/folder2/subfolder2`
   ]);
 });
