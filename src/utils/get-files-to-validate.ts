@@ -21,10 +21,10 @@ export const getFilesToValidate = async (
 ): Promise<string[]> => {
   const { files, paths, exclude, languages } = options;
   if (files) return files.map(file => path.resolve(cwd(), file));
-  const excludeRegexps = [...(exclude ?? []), "node_modules"].map(patternToRegex);
+  const excludeRegexps = (exclude ?? []).map(patternToRegex);
   const folders = (await browseFolders(cwd())).map(async folder => {
-    const isExcluded = excludeRegexps?.some(regex => regex.test(folder)) ?? false;
-    if (isExcluded || (paths && !paths.some(path => folder.startsWith(`${cwd()}/${path}`)))) {
+    const isFolderExcluded = [...excludeRegexps, /node_modules/].some(regex => regex.test(folder));
+    if (isFolderExcluded || (paths && !paths.some(path => folder.startsWith(`${cwd()}/${path}`)))) {
       return [];
     }
     const files = await fs.readdir(folder);
@@ -36,7 +36,8 @@ export const getFilesToValidate = async (
       : Object.values(EXTENSIONS_PER_LANGUAGE).flat();
     for (const file of files) {
       const fileStat = await fs.stat(path.join(folder, file));
-      if (fileStat.isFile() && extensions.includes(path.extname(file))) {
+      const isFileExcluded = excludeRegexps.some(regex => regex.test(file));
+      if (fileStat.isFile() && extensions.includes(path.extname(file)) && !isFileExcluded) {
         filesToValidate.push(path.join(folder, file));
       }
     }
