@@ -1,5 +1,16 @@
 # markup-validator
 
+## 0.2.1
+
+### Patch changes
+
+- **utils:** only validate files whose filenames do not match the patterns in `exclude` option ([`b204fbe`](https://github.com/webdevbynight/markup-validator/commit/b204fbec667160b09ab750a354754db9b6329766))
+- **utils:** include the starting folder when beginning browsing recursively ([`9424f24`](https://github.com/webdevbynight/markup-validator/commit/9424f243cd09ac6b3b0e3b8f682b466e3e17765e))
+
+---
+
+**Full changelog:** [`v0.2.0...v0.2.1`](https://github.com/webdevbynight/markup-validator/compare/v0.2.0...v0.2.1)
+
 ## 0.2.0
 
 ### Minor changes
