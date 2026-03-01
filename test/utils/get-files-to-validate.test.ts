@@ -63,6 +63,13 @@ it("should return all files from `docs` to validate", async () => {
 it("should return no files if no valid files to validate are found in paths", async () => {
   expect(await getFilesToValidate({ paths: ["some-folder"] })).toEqual([]);
 });
+it("should return no files from those matching the patterns declared in `exclude` option", async () => {
+  expect(await getFilesToValidate({ exclude: ["build", "tmp"] })).toEqual([
+    `${mockedCwd}/docs/index.html`,
+    `${mockedCwd}/docs/styles.css`,
+    `${mockedCwd}/docs/graphic.svg`
+  ]);
+});
 it("should return all HTML files to validate", async () => {
   expect(await getFilesToValidate({ languages: ["html"] })).toEqual([
     `${mockedCwd}/docs/index.html`,
