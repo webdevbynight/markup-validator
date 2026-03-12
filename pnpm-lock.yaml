@@ -334,7 +334,7 @@ packages:
 
   '@release-change/cli@0.3.0':
     resolution: {integrity: sha512-rVIzEaQVLa/tMlkrJOLtBBJPzHnNhMqYuWktwlijTEl9SHuTEamFG6uXVgOmkgMxszdL5N5pzwqy263tO1++Hg==}
-    engines: {node: ^20.18.3 || ^22.12.0 || ^24.0.0, npm: '>=10.8.2', pnpm: '>=10.30.2'}
+    engines: {node: ^20.18.3 || ^22.12.0 || ^24.0.0, npm: '>=10.8.2', pnpm: '>=10.32.1'}
     hasBin: true
 
   '@release-change/commit-analyser@0.1.3':
@@ -351,7 +351,7 @@ packages:
 
   '@release-change/git@0.2.0':
     resolution: {integrity: sha512-AmYXvx/XjhfzhtAX4u3UhGFo0jm4hAFVLIIB+txRckqdsvVjWVG74GeXP4sLiNe1kS9d/XM7CRFcsEDQP2LOtA==}
-    engines: {node: ^20.18.3 || ^22.12.0 || ^24.0.0, npm: '>=10.8.2', pnpm: '>=10.30.2'}
+    engines: {node: ^20.18.3 || ^22.12.0 || ^24.0.0, npm: '>=10.8.2', pnpm: '>=10.32.1'}
 
   '@release-change/github@0.1.4':
     resolution: {integrity: sha512-WP0w38YS95BdZjdxFGW+fvkcJKIX5EPYnzRwuEGOLUG6v0T80az2tjC23r/jj49pZCcz2d2lWaniQ7irwibbCQ==}
@@ -367,11 +367,11 @@ packages:
 
   '@release-change/release-notes-generator@0.1.5':
     resolution: {integrity: sha512-tG9yg0vBWDV811UwIFIWsL5nlzsjgvCtKFUOL9W6fBPqSLJ2PqP70UNINx6z/qGB41MTCgoNiN9kbhAfapxDWQ==}
-    engines: {node: ^20.18.3 || ^22.12.0 || ^24.0.0, npm: '>=10.8.2', pnpm: '>=10.30.2'}
+    engines: {node: ^20.18.3 || ^22.12.0 || ^24.0.0, npm: '>=10.8.2', pnpm: '>=10.32.1'}
 
   '@release-change/release@0.2.0':
     resolution: {integrity: sha512-DaAdGSOqRt1yS7GdF7DCAGyzJgnsGIAzQKFczZ38MO6ifgQmB5MujVN/Xhi+NoiE11c2AOsU4byCVKayaujt3Q==}
-    engines: {node: ^20.18.3 || ^22.12.0 || ^24.0.0, npm: '>=10.8.2', pnpm: '>=10.30.2'}
+    engines: {node: ^20.18.3 || ^22.12.0 || ^24.0.0, npm: '>=10.8.2', pnpm: '>=10.32.1'}
 
   '@release-change/semver@0.1.0':
     resolution: {integrity: sha512-xMMNsJEJaZNyOOh2rvs2W4Nyw50Tw+est0p8KqiPImtsbe8cjTrBqdI16zzi5sjZJQU3IRfD/qLW1fdV3OafxA==}
