@@ -59,14 +59,13 @@ Awesome! You are now able to contribute to markup-validator.
 
 #### Available commands
 
-- `pnpm biome`: checks linting and formating errors and fixes them,
-- `pnpm biome:check`: only checks linting and formating,
+- `pnpm biome`: checks imports organisation and linting and formating errors and fixes them,
+- `pnpm biome:check`: only checks imports organisation, linting and formating,
 - `pnpm format`: checks formating errors only and fixes them,
 - `pnpm format:check`: only checks formating errors,
 - `pnpm lint`: checks linting errors only and fixes them,
 - `pnpm lint:check`: only checks linting errors,
 - `pnpm build`: runs the TypeScript compiler once,
-- `pnpm check-exports`: checks whether the package exports are correct,
 - `pnpm dev`: runs both the TypeScript compiler and the test suites in watch mode,
 - `pnpm tsc:watch`: runs the TypeScript compiler in watch mode,
 - `pnpm test`: runs the test suites once,
