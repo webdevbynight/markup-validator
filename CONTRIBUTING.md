@@ -66,7 +66,6 @@ Awesome! You are now able to contribute to markup-validator.
 - `pnpm lint`: checks linting errors only and fixes them,
 - `pnpm lint:check`: only checks linting errors,
 - `pnpm build`: runs the TypeScript compiler once,
-- `pnpm check-exports`: checks whether the package exports are correct,
 - `pnpm dev`: runs both the TypeScript compiler and the test suites in watch mode,
 - `pnpm tsc:watch`: runs the TypeScript compiler in watch mode,
 - `pnpm test`: runs the test suites once,
