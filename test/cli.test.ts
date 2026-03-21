@@ -8,19 +8,19 @@ import { mockedArgs } from "./utils/fixtures/mocked-args.js";
 
 let originalArgv: string[];
 
+vi.mock("../src/utils/show-help.js", () => ({ showHelp: vi.fn() }));
+vi.mock("../src/utils/show-version.js", () => ({ showVersion: vi.fn() }));
+vi.mock("../src/utils/parse-args.js", () => ({ parseArgs: vi.fn() }));
+vi.mock("../src/markup-validator.js", () => {
+  const MockClass = vi.fn();
+  MockClass.prototype.validate = vi.fn().mockResolvedValue({ version: "1.0", messages: [] });
+  return { MarkupValidator: MockClass };
+});
+
 beforeEach(() => {
-  vi.mock("../src/utils/show-help.js", () => ({ showHelp: vi.fn() }));
-  vi.mock("../src/utils/show-version.js", () => ({ showVersion: vi.fn() }));
-  vi.mock("../src/utils/parse-args.js", () => ({ parseArgs: vi.fn() }));
-  vi.mock("../src/markup-validator.js", () => {
-    const MockClass = vi.fn();
-    MockClass.prototype.validate = vi.fn().mockResolvedValue({ version: "1.0", messages: [] });
-    return { MarkupValidator: MockClass };
-  });
   originalArgv = process.argv;
 });
 afterEach(() => {
-  vi.clearAllMocks();
   process.argv = originalArgv;
 });
 

@@ -1,4 +1,4 @@
-import { afterEach, beforeEach, expect, it, vi } from "vitest";
+import { expect, it, vi } from "vitest";
 
 import { postDocumentUsingRest } from "../../src/utils/post-document-using-rest.js";
 import { HTMLValidator } from "../../src/validators/html-validator.js";
@@ -6,14 +6,9 @@ import { mockedInvalidHTMLFilesResults } from "../fixtures/mocked-invalid-html-f
 import { mockedValidHTMLFilesResults } from "../fixtures/mocked-valid-html-files-results.js";
 import { mockedHTMLHeaders } from "../utils/fixtures/mocked-headers.js";
 
-beforeEach(() => {
-  vi.mock("../../src/utils/post-document-using-rest.js", () => ({
-    postDocumentUsingRest: vi.fn()
-  }));
-});
-afterEach(() => {
-  vi.clearAllMocks();
-});
+vi.mock("../../src/utils/post-document-using-rest.js", () => ({
+  postDocumentUsingRest: vi.fn()
+}));
 
 it("should be an instance of HTMLValidator", () => {
   const htmlValidator = new HTMLValidator("fake-html-content");

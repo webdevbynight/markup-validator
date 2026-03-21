@@ -12,26 +12,27 @@ import { HTMLValidator } from "../src/validators/html-validator.js";
 import { SVGValidator } from "../src/validators/svg-validator.js";
 import { mockedOptions } from "./fixtures/mocked-options.js";
 
+vi.mock("../src/utils/dry-run-notice.js", () => ({ dryRunNotice: vi.fn() }));
+vi.mock("../src/utils/get-files-to-validate.js", () => ({ getFilesToValidate: vi.fn() }));
+vi.mock("../src/utils/prepare-reporting.js", () => ({ prepareReporting: vi.fn() }));
+vi.mock("../src/utils/display-reporting.js", () => ({ displayReporting: vi.fn() }));
+vi.mock("../src/validators/html-validator.js", () => {
+  const MockClass = vi.fn();
+  MockClass.prototype.validate = vi.fn().mockResolvedValue({ version: "1.0", messages: [] });
+  return { HTMLValidator: MockClass };
+});
+vi.mock("../src/validators/css-validator.js", () => {
+  const MockClass = vi.fn();
+  MockClass.prototype.validate = vi.fn().mockResolvedValue({ version: "1.0", messages: [] });
+  return { CSSValidator: MockClass };
+});
+vi.mock("../src/validators/svg-validator.js", () => {
+  const MockClass = vi.fn();
+  MockClass.prototype.validate = vi.fn().mockResolvedValue({ version: "1.0", messages: [] });
+  return { SVGValidator: MockClass };
+});
+
 beforeEach(() => {
-  vi.mock("../src/utils/dry-run-notice.js", () => ({ dryRunNotice: vi.fn() }));
-  vi.mock("../src/utils/get-files-to-validate.js", () => ({ getFilesToValidate: vi.fn() }));
-  vi.mock("../src/utils/prepare-reporting.js", () => ({ prepareReporting: vi.fn() }));
-  vi.mock("../src/utils/display-reporting.js", () => ({ displayReporting: vi.fn() }));
-  vi.mock("../src/validators/html-validator.js", () => {
-    const MockClass = vi.fn();
-    MockClass.prototype.validate = vi.fn().mockResolvedValue({ version: "1.0", messages: [] });
-    return { HTMLValidator: MockClass };
-  });
-  vi.mock("../src/validators/css-validator.js", () => {
-    const MockClass = vi.fn();
-    MockClass.prototype.validate = vi.fn().mockResolvedValue({ version: "1.0", messages: [] });
-    return { CSSValidator: MockClass };
-  });
-  vi.mock("../src/validators/svg-validator.js", () => {
-    const MockClass = vi.fn();
-    MockClass.prototype.validate = vi.fn().mockResolvedValue({ version: "1.0", messages: [] });
-    return { SVGValidator: MockClass };
-  });
   vi.useFakeTimers();
 });
 afterEach(() => {

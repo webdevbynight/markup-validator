@@ -2,7 +2,7 @@ import type { Stats } from "node:fs";
 
 import fs from "node:fs/promises";
 
-import { afterEach, beforeEach, expect, it, vi } from "vitest";
+import { beforeEach, expect, it, vi } from "vitest";
 
 import { browseFolders } from "../../src/utils/browse-folders.js";
 import { getFilesToValidate } from "../../src/utils/get-files-to-validate.js";
@@ -21,9 +21,10 @@ const mockedFiles: Record<string, string[]> = {
   "/fake/path/node_modules/dependency/docs": ["index.html", "styles.css", "graphic.svg"]
 };
 
+vi.mock("node:process", () => ({ cwd: vi.fn(() => mockedCwd) }));
+vi.mock("../../src/utils/browse-folders.js", () => ({ browseFolders: vi.fn() }));
+
 beforeEach(() => {
-  vi.mock("node:process", () => ({ cwd: vi.fn(() => mockedCwd) }));
-  vi.mock("../../src/utils/browse-folders.js", () => ({ browseFolders: vi.fn() }));
   vi.mocked(browseFolders).mockResolvedValue(mockedTree);
   vi.spyOn(fs, "readdir").mockImplementation(path => {
     const pathStr = path.toString();
@@ -37,9 +38,6 @@ beforeEach(() => {
       isFile: () => true
     } as Stats);
   });
-});
-afterEach(() => {
-  vi.clearAllMocks();
 });
 
 it("should return all files to validate", async () => {
