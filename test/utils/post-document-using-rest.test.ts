@@ -22,7 +22,7 @@ it("should throw an error if the response is not OK or has a non-200 status", ()
   );
   expect(
     postDocumentUsingRest(mockedEntryPoint, mockedDocument, mockedHTMLHeaders)
-  ).rejects.toThrowError("Failed to post the document: 404, Not Found.");
+  ).rejects.toThrow("Failed to post the document: 404, Not Found.");
 });
 it("should return the JSON data if the response is OK and has a 200 status", async () => {
   const mockedData = {
