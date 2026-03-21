@@ -47,7 +47,7 @@ it.each(mockedOptions)("should instantiate the object with $0", options => {
   const markupValidator = new MarkupValidator(options);
   expect(markupValidator).toHaveProperty("options", options);
 });
-it("should skip validatation on dry-run mode", async () => {
+it("should skip validation on dry-run mode", async () => {
   const markupValidator = new MarkupValidator({ dryRun: true });
   await markupValidator.validate();
   expect(markupValidator).toHaveProperty("options", { dryRun: true });
