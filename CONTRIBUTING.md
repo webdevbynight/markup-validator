@@ -109,9 +109,9 @@ A type ending with `!` introduces breaking changes.
 
 #### Subject
 
-The subject contains succinct description of the change:
+The subject contains a succinct description of the change:
 - use the imperative, present tense (“change”, not “changed” nor “changes”),
-- do not capitalize first letter,
+- do not capitalise the first letter,
 - no dot (.) at the end.
 
 It should not describe what the code is doing.
@@ -151,6 +151,6 @@ markup-validator uses [Biome](https://biomejs.dev) for linting and formatting. B
 ### Tests
 
 > [!NOTE]
-> Before pushing your code changes make sure **all tests pass.**
+> Before pushing your code changes, make sure **all tests pass.**
 
 markup-validator uses [Vitest](https://vitest.dev) for writing and running tests.
