@@ -1,4 +1,4 @@
-import { afterEach, beforeEach, expect, it, vi } from "vitest";
+import { expect, it, vi } from "vitest";
 
 import { postDocumentUsingRest } from "../../src/utils/post-document-using-rest.js";
 import { SVGValidator } from "../../src/validators/svg-validator.js";
@@ -6,14 +6,9 @@ import { mockedInvalidSVGFilesResults } from "../fixtures/mocked-invalid-svg-fil
 import { mockedValidSVGFilesResults } from "../fixtures/mocked-valid-svg-files-results.js";
 import { mockedSVGHeaders } from "../utils/fixtures/mocked-headers.js";
 
-beforeEach(() => {
-  vi.mock("../../src/utils/post-document-using-rest.js", () => ({
-    postDocumentUsingRest: vi.fn()
-  }));
-});
-afterEach(() => {
-  vi.clearAllMocks();
-});
+vi.mock("../../src/utils/post-document-using-rest.js", () => ({
+  postDocumentUsingRest: vi.fn()
+}));
 
 it("should be an instance of SVGValidator", () => {
   const svgValidator = new SVGValidator("fake-svg-content");
