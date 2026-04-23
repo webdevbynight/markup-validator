@@ -30,7 +30,7 @@ Your pull request will be reviewed and either merged, subject to change requests
 
 Make sure:
 - you have [Node.js](https://nodejs.org/en/) at version 20.18.3+, 22.12.0+ or 24.0.0+,
-- you have [pnpm](https://pnpm.io) at version 10.33.1+ installed,
+- you have [pnpm](https://pnpm.io) at version 10.33.2+ installed,
 - you are familiar with [Git](https://git-scm.com).
 
 **Before submitting your pull request,** make sure the following requirements are fulfilled:
