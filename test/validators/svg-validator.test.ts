@@ -14,38 +14,38 @@ it("should be an instance of SVGValidator", () => {
   const svgValidator = new SVGValidator("fake-svg-content");
   expect(svgValidator).toBeInstanceOf(SVGValidator);
 });
-it.each([
-  ...mockedValidSVGFilesResults,
-  ...mockedInvalidSVGFilesResults
-])("should instantiate the object with the file contents", ({ content }) => {
-  const svgValidator = new SVGValidator(content);
-  expect(svgValidator).toHaveProperty("content", content);
-});
-it.each(
-  mockedValidSVGFilesResults
-)("should return a JSON output with an empty array of messages or warning messages", async ({
-  content,
-  ignoreLevel,
-  expectedEntryPoint,
-  expectedResult
-}) => {
-  vi.mocked(postDocumentUsingRest).mockResolvedValue(expectedResult);
-  const svgValidator = new SVGValidator(content, ignoreLevel);
-  const result = await svgValidator.validate();
-  expect(postDocumentUsingRest).toHaveBeenCalledWith(expectedEntryPoint, content, mockedSVGHeaders);
-  expect(result).toEqual(expectedResult);
-});
-it.each(
-  mockedInvalidSVGFilesResults
-)("should return a JSON output with messages according to the level requested", async ({
-  content,
-  ignoreLevel,
-  expectedEntryPoint,
-  expectedResult
-}) => {
-  vi.mocked(postDocumentUsingRest).mockResolvedValue(expectedResult);
-  const svgValidator = new SVGValidator(content, ignoreLevel);
-  const result = await svgValidator.validate();
-  expect(postDocumentUsingRest).toHaveBeenCalledWith(expectedEntryPoint, content, mockedSVGHeaders);
-  expect(result).toEqual(expectedResult);
-});
+it.each([...mockedValidSVGFilesResults, ...mockedInvalidSVGFilesResults])(
+  "should instantiate the object with the file contents",
+  ({ content }) => {
+    const svgValidator = new SVGValidator(content);
+    expect(svgValidator).toHaveProperty("content", content);
+  }
+);
+it.each(mockedValidSVGFilesResults)(
+  "should return a JSON output with an empty array of messages or warning messages",
+  async ({ content, ignoreLevel, expectedEntryPoint, expectedResult }) => {
+    vi.mocked(postDocumentUsingRest).mockResolvedValue(expectedResult);
+    const svgValidator = new SVGValidator(content, ignoreLevel);
+    const result = await svgValidator.validate();
+    expect(postDocumentUsingRest).toHaveBeenCalledWith(
+      expectedEntryPoint,
+      content,
+      mockedSVGHeaders
+    );
+    expect(result).toEqual(expectedResult);
+  }
+);
+it.each(mockedInvalidSVGFilesResults)(
+  "should return a JSON output with messages according to the level requested",
+  async ({ content, ignoreLevel, expectedEntryPoint, expectedResult }) => {
+    vi.mocked(postDocumentUsingRest).mockResolvedValue(expectedResult);
+    const svgValidator = new SVGValidator(content, ignoreLevel);
+    const result = await svgValidator.validate();
+    expect(postDocumentUsingRest).toHaveBeenCalledWith(
+      expectedEntryPoint,
+      content,
+      mockedSVGHeaders
+    );
+    expect(result).toEqual(expectedResult);
+  }
+);

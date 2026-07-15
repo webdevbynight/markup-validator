@@ -7,9 +7,9 @@ import { mockedValidResultReporting } from "./fixtures/mocked-valid-result-repor
 
 vi.mock("node:process", () => ({ cwd: vi.fn(() => mockedCwd) }));
 
-it.each([
-  ...mockedValidResultReporting,
-  ...mockedInvalidResultReporting
-])("should prepare reporting for each document", ({ file, language, result, reporting }) => {
-  expect(prepareReporting(file, language, result)).toStrictEqual(reporting);
-});
+it.each([...mockedValidResultReporting, ...mockedInvalidResultReporting])(
+  "should prepare reporting for each document",
+  ({ file, language, result, reporting }) => {
+    expect(prepareReporting(file, language, result)).toStrictEqual(reporting);
+  }
+);
