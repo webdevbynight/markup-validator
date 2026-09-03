@@ -9,7 +9,7 @@ afterEach(() => {
   vi.unstubAllGlobals();
 });
 
-it("should throw an error if the response is not OK or has a non-200 status", () => {
+it("should throw an error if the response is not OK or has a non-200 status", async () => {
   vi.stubGlobal(
     "fetch",
     vi.fn().mockImplementation(() =>
@@ -20,7 +20,7 @@ it("should throw an error if the response is not OK or has a non-200 status", ()
       })
     )
   );
-  expect(
+  await expect(
     postDocumentUsingRest(mockedEntryPoint, mockedDocument, mockedHTMLHeaders)
   ).rejects.toThrow("Failed to post the document: 404, Not Found.");
 });
