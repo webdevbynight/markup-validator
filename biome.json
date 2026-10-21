@@ -1,7 +1,14 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "files": {
-    "includes": ["**", "!**/.gitignore", "!**/node_modules", "!**/tsconfig.*"],
+    "includes": [
+      "**",
+      "!**/.gitignore",
+      "!**/node_modules",
+      "!**/tsconfig.*",
+      "!**/CHANGELOG.md",
+      "!**/pnpm-lock.yaml"
+    ],
     "ignoreUnknown": true
   },
   "vcs": {
