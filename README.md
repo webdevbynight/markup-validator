@@ -53,7 +53,7 @@ Lists strings to match in paths to skip. When omitted, all files specified by `f
 
 Type: `array`  
 Default: `["html", "css", "svg"]`
-CLI arguments: `-l <space-separated list of languages>`, `--languages <space-separated list of languages>` 
+CLI arguments: `-l <space-separated list of languages>`, `--languages <space-separated list of languages>`
 
 Specifies which languages to validate. When omitted, all languages are validated.
 
