@@ -6,7 +6,7 @@ The latest version of markup-validator is currently supported with security upda
 
 ### Supported Node.js versions
 
-Node.js 22.12.0+ and 24.0.0+ are supported. **Odd major versions are not supported.**
+Node.js 22.12.0+, 24.0.0+ and 26.0.0+ are supported. **Odd major versions are not supported.**
 
 ### Supported package manager versions
 
