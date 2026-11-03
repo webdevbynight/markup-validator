@@ -1,6 +1,6 @@
 # markup-validator
 
-Check the markup validity of HTML, CSS and SVG files using the W3C validator
+Check the markup validity of HTML, CSS, SVG and MathML files using the W3C validator
 
 ![License: MIT](https://img.shields.io/github/license/webdevbynight/markup-validator)
 [![ESM-only package](https://img.shields.io/badge/package-ESM--only-ffe536)](https://nodejs.org/api/esm.html)
@@ -11,7 +11,7 @@ Check the markup validity of HTML, CSS and SVG files using the W3C validator
 ![Node support](https://img.shields.io/node/v/markup-validator)
 ![Build status](https://img.shields.io/github/actions/workflow/status/webdevbynight/markup-validator/run-tests.yml)
 
-**markup-validator** takes HTML, CSS and SVG files and returns detailed validation results.
+**markup-validator** takes HTML, CSS, SVG and MathML files and returns detailed validation results.
 
 ## Installation
 
@@ -44,7 +44,7 @@ Specifies which folders or files to be sent to validation. When omitted, all fil
 
 ##### exclude
 
-Type: `array`
+Type: `array`  
 CLI arguments: `-e <space-separated list of paths>`, `--exclude <space-separated list of paths>`
 
 Lists strings to match in paths to skip. When omitted, all files specified by `files` options if defined (all files otherwise) are validated (skipping the `node_modules` folder).
@@ -52,15 +52,17 @@ Lists strings to match in paths to skip. When omitted, all files specified by `f
 ##### languages
 
 Type: `array`  
-Default: `["html", "css", "svg"]`
+Default: `["html", "css", "svg", "mathml"]`  
 CLI arguments: `-l <space-separated list of languages>`, `--languages <space-separated list of languages>`
 
 Specifies which languages to validate. When omitted, all languages are validated.
 
+The accepted values are `html`, `css`, `svg` and `mathml`.
+
 ##### dryRun
 
 Type: `boolean`  
-Default: `false`
+Default: `false`  
 CLI arguments: `-d`, `--dry-run`
 
 Bypasses the validation (for usage while building CI).
@@ -98,9 +100,9 @@ You can run `markup-validator` from the `scripts` section of your `package.json`
 
 #### Examples
 
-- `markup-validator`: validates all HTML, CSS and SVG files in the project;
-- `markup-validator --paths docs --exclude build tmp`: validates all HTML, CSS and SVG files in the `docs/` folder, except files which have `build` or `tmp` anywhere in their pathname or filename;
-- `markup-validator --files docs/index.html docs/style.css docs/icon.svg`: validates only the specified files;
+- `markup-validator`: validates all HTML, CSS, SVG and MathML files in the project;
+- `markup-validator --paths docs --exclude build tmp`: validates all HTML, CSS, SVG and MathML files in the `docs/` folder, except files which have `build` or `tmp` anywhere in their pathname or filename;
+- `markup-validator --files docs/index.html docs/style.css docs/icon.svg docs/formula.mml`: validates only the specified files;
 - `markup-validator --languages html css`: validates only HTML and CSS files in the project.
 
 ### Application code
