@@ -5,7 +5,7 @@ import { postDocumentUsingRest } from "../utils/post-document-using-rest.js";
 import { W3C_MAIN_VALIDATOR_ENTRY_POINT } from "../constants.js";
 
 /**
- * Validates CSS content using the W3C HTML Validator.
+ * Validates CSS content using the W3C CSS Validator.
  */
 export class CSSValidator {
   private readonly content: string;
