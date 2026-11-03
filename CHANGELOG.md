@@ -1,5 +1,15 @@
 # markup-validator
 
+## 0.3.0
+
+### Minor changes
+
+- implement document validation for MathML ([`60717f4`](https://github.com/webdevbynight/markup-validator/commit/60717f4b2229bdac13d8c5264664cd8dc8df9c33))
+
+---
+
+**Full changelog:** [`v0.2.1...v0.3.0`](https://github.com/webdevbynight/markup-validator/compare/v0.2.1...v0.3.0)
+
 ## 0.2.1
 
 ### Patch changes
