@@ -9,6 +9,7 @@ import { getFilesToValidate } from "../src/utils/get-files-to-validate.js";
 import { prepareReporting } from "../src/utils/prepare-reporting.js";
 import { CSSValidator } from "../src/validators/css-validator.js";
 import { HTMLValidator } from "../src/validators/html-validator.js";
+import { MathMLValidator } from "../src/validators/mathml-validator.js";
 import { SVGValidator } from "../src/validators/svg-validator.js";
 import { mockedOptions } from "./fixtures/mocked-options.js";
 
@@ -30,6 +31,11 @@ vi.mock("../src/validators/svg-validator.js", () => {
   const MockClass = vi.fn();
   MockClass.prototype.validate = vi.fn().mockResolvedValue({ version: "1.0", messages: [] });
   return { SVGValidator: MockClass };
+});
+vi.mock("../src/validators/mathml-validator.js", () => {
+  const MockClass = vi.fn();
+  MockClass.prototype.validate = vi.fn().mockResolvedValue({ version: "1.0", messages: [] });
+  return { MathMLValidator: MockClass };
 });
 
 beforeEach(() => {
@@ -65,6 +71,7 @@ it("should not call any language validations when there are no files to validate
   expect(HTMLValidator).not.toHaveBeenCalled();
   expect(CSSValidator).not.toHaveBeenCalled();
   expect(SVGValidator).not.toHaveBeenCalled();
+  expect(MathMLValidator).not.toHaveBeenCalled();
   expect(prepareReporting).not.toHaveBeenCalled();
   expect(displayReporting).not.toHaveBeenCalled();
 });
@@ -81,6 +88,7 @@ it("should call the appropriate language validations when there are files to val
   expect(HTMLValidator).toHaveBeenCalled();
   expect(CSSValidator).toHaveBeenCalled();
   expect(SVGValidator).not.toHaveBeenCalled();
+  expect(MathMLValidator).not.toHaveBeenCalled();
   expect(prepareReporting).toHaveBeenCalled();
   expect(displayReporting).toHaveBeenCalled();
 });
@@ -88,28 +96,37 @@ it("should call the appropriate language validations when `files` option is set"
   vi.spyOn(fs, "readFileSync").mockReturnValue("fake-content");
   vi.mocked(getFilesToValidate).mockResolvedValue([
     "/fake/path/selected.html",
-    "/fake/path/selected.svg"
+    "/fake/path/selected.svg",
+    "/fake/path/selected.mml"
   ]);
-  const markupValidator = new MarkupValidator({ files: ["selected.html", "selected.svg"] });
+  const markupValidator = new MarkupValidator({
+    files: ["selected.html", "selected.svg", "selected.mml"]
+  });
   await markupValidator.validate();
   await vi.runAllTimersAsync();
   expect(dryRunNotice).not.toHaveBeenCalled();
   expect(HTMLValidator).toHaveBeenCalled();
   expect(CSSValidator).not.toHaveBeenCalled();
   expect(SVGValidator).toHaveBeenCalled();
+  expect(MathMLValidator).toHaveBeenCalled();
   expect(prepareReporting).toHaveBeenCalled();
   expect(displayReporting).toHaveBeenCalled();
 });
 it("should call the appropriate language validations when `languages` option is set", async () => {
   vi.spyOn(fs, "readFileSync").mockReturnValue("fake-content");
-  vi.mocked(getFilesToValidate).mockResolvedValue(["/fake/path/styles.css", "/fake/path/icon.svg"]);
-  const markupValidator = new MarkupValidator({ languages: ["css", "svg"] });
+  vi.mocked(getFilesToValidate).mockResolvedValue([
+    "/fake/path/styles.css",
+    "/fake/path/icon.svg",
+    "/fake/path/formula.mml"
+  ]);
+  const markupValidator = new MarkupValidator({ languages: ["css", "svg", "mathml"] });
   await markupValidator.validate();
   await vi.runAllTimersAsync();
   expect(dryRunNotice).not.toHaveBeenCalled();
   expect(HTMLValidator).not.toHaveBeenCalled();
   expect(CSSValidator).toHaveBeenCalled();
   expect(SVGValidator).toHaveBeenCalled();
+  expect(MathMLValidator).toHaveBeenCalled();
   expect(prepareReporting).toHaveBeenCalled();
   expect(displayReporting).toHaveBeenCalled();
 });

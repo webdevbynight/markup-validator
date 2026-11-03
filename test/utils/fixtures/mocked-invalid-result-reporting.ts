@@ -311,5 +311,51 @@ export const mockedInvalidResultReporting: {
         extract: 'rm="scale(.8)"/>\\n  <use xlink:'
       }
     ]
+  },
+  {
+    file: `${mockedCwd}/docs/invalid.mml`,
+    url: "docs/invalid.mml",
+    language: "mathml",
+    result: {
+      version: "26.2.5",
+      messages: [
+        {
+          type: "error",
+          lastLine: 7,
+          lastColumn: 12,
+          firstColumn: 5,
+          message:
+            "MathML element “mfrac” is missing a required instance of one or more of the following child elements: “abs”, “and”, “apply”, “approx”, “arccos”, “arccosh”, “arccot”, “arccoth”, “arccsc”, “arccsch”, “arcsec”, “arcsech”, “arcsin”, “arcsinh”, “arctan”, “arctanh”, “arg”, “bind”, “card”, “cartesianproduct”, “cbytes”, “ceiling”, “cerror”, “ci”, “cn”, “codomain”, “complexes”, “compose”, “conjugate”, “cos”, “cosh”, “cot”, “coth”, “cs”, “csc”, “csch”, “csymbol”, “curl”, “declare”, “determinant”, “diff”, “divergence”, “divide”, “domain”, “emptyset”, “eq”, “equivalent”, “eulergamma”, “exists”, “exp”, “exponentiale”, “factorial”, “factorof”, “false”, “floor”, “fn”, “forall”, “gcd”, “geq”, “grad”, “gt”, “ident”, “image”, “imaginary”, “imaginaryi”, “implies”, “in”, “infinity”, “int”, “integers”, “intersect”, “interval”, “inverse”, “lambda”, “laplacian”, “lcm”, “leq”, “limit”, “list”, “ln”, “log”, “lt”, “maction”, “maligngroup”, “malignmark”, “matrix”, “matrixrow”, “max”, “mean”, “median”, “menclose”, “merror”, “mfenced”, “mfrac”, “mi”, “min”, “minus”, “mlongdiv”, “mmultiscripts”, “mn”, “mo”, “mode”, “moment”, “mover”, “mpadded”, “mphantom”, “mroot”, “mrow”, “ms”, “mspace”, “msqrt”, “mstack”, “mstyle”, “msub”, “msubsup”, “msup”, “mtable”, “mtext”, “munder”, “munderover”, “naturalnumbers”, “neq”, “not”, “notanumber”, “notin”, “notprsubset”, “notsubset”, “or”, “outerproduct”, “partialdiff”, “pi”, “piecewise”, “plus”, “power”, “primes”, “product”, “prsubset”, “quotient”, “rationals”, “real”, “reals”, “reln”, “rem”, “root”, “scalarproduct”, “sdev”, “sec”, “sech”, “selector”, “semantics”, “set”, “setdiff”, “share”, “sin”, “sinh”, “subset”, “sum”, “tan”, “tanh”, “tendsto”, “times”, “transpose”, “true”, “union”, “variance”, “vector”, “vectorproduct”, “xor”.",
+          extract: "</mi>\n    </mfrac>\n  </m",
+          hiliteStart: 10,
+          hiliteLength: 8
+        }
+      ]
+    },
+    reporting: {
+      language: "mathml",
+      status: "fail",
+      url: "docs/invalid.mml",
+      messages: [
+        {
+          type: "error",
+          line: 7,
+          column: 5,
+          message:
+            "MathML element “mfrac” is missing a required instance of one or more of the following child elements: “abs”, “and”, “apply”, “approx”, “arccos”, “arccosh”, “arccot”, “arccoth”, “arccsc”, “arccsch”, “arcsec”, “arcsech”, “arcsin”, “arcsinh”, “arctan”, “arctanh”, “arg”, “bind”, “card”, “cartesianproduct”, “cbytes”, “ceiling”, “cerror”, “ci”, “cn”, “codomain”, “complexes”, “compose”, “conjugate”, “cos”, “cosh”, “cot”, “coth”, “cs”, “csc”, “csch”, “csymbol”, “curl”, “declare”, “determinant”, “diff”, “divergence”, “divide”, “domain”, “emptyset”, “eq”, “equivalent”, “eulergamma”, “exists”, “exp”, “exponentiale”, “factorial”, “factorof”, “false”, “floor”, “fn”, “forall”, “gcd”, “geq”, “grad”, “gt”, “ident”, “image”, “imaginary”, “imaginaryi”, “implies”, “in”, “infinity”, “int”, “integers”, “intersect”, “interval”, “inverse”, “lambda”, “laplacian”, “lcm”, “leq”, “limit”, “list”, “ln”, “log”, “lt”, “maction”, “maligngroup”, “malignmark”, “matrix”, “matrixrow”, “max”, “mean”, “median”, “menclose”, “merror”, “mfenced”, “mfrac”, “mi”, “min”, “minus”, “mlongdiv”, “mmultiscripts”, “mn”, “mo”, “mode”, “moment”, “mover”, “mpadded”, “mphantom”, “mroot”, “mrow”, “ms”, “mspace”, “msqrt”, “mstack”, “mstyle”, “msub”, “msubsup”, “msup”, “mtable”, “mtext”, “munder”, “munderover”, “naturalnumbers”, “neq”, “not”, “notanumber”, “notin”, “notprsubset”, “notsubset”, “or”, “outerproduct”, “partialdiff”, “pi”, “piecewise”, “plus”, “power”, “primes”, “product”, “prsubset”, “quotient”, “rationals”, “real”, “reals”, “reln”, “rem”, “root”, “scalarproduct”, “sdev”, “sec”, “sech”, “selector”, “semantics”, “set”, “setdiff”, “share”, “sin”, “sinh”, “subset”, “sum”, “tan”, “tanh”, “tendsto”, “times”, “transpose”, “true”, “union”, “variance”, “vector”, “vectorproduct”, “xor”.",
+          extract: "</mi>\\n    </mfrac>\\n  </m"
+        }
+      ]
+    },
+    messages: 1,
+    logs: [
+      {
+        level: "Error",
+        message:
+          "MathML element “mfrac” is missing a required instance of one or more of the following child elements: “abs”, “and”, “apply”, “approx”, “arccos”, “arccosh”, “arccot”, “arccoth”, “arccsc”, “arccsch”, “arcsec”, “arcsech”, “arcsin”, “arcsinh”, “arctan”, “arctanh”, “arg”, “bind”, “card”, “cartesianproduct”, “cbytes”, “ceiling”, “cerror”, “ci”, “cn”, “codomain”, “complexes”, “compose”, “conjugate”, “cos”, “cosh”, “cot”, “coth”, “cs”, “csc”, “csch”, “csymbol”, “curl”, “declare”, “determinant”, “diff”, “divergence”, “divide”, “domain”, “emptyset”, “eq”, “equivalent”, “eulergamma”, “exists”, “exp”, “exponentiale”, “factorial”, “factorof”, “false”, “floor”, “fn”, “forall”, “gcd”, “geq”, “grad”, “gt”, “ident”, “image”, “imaginary”, “imaginaryi”, “implies”, “in”, “infinity”, “int”, “integers”, “intersect”, “interval”, “inverse”, “lambda”, “laplacian”, “lcm”, “leq”, “limit”, “list”, “ln”, “log”, “lt”, “maction”, “maligngroup”, “malignmark”, “matrix”, “matrixrow”, “max”, “mean”, “median”, “menclose”, “merror”, “mfenced”, “mfrac”, “mi”, “min”, “minus”, “mlongdiv”, “mmultiscripts”, “mn”, “mo”, “mode”, “moment”, “mover”, “mpadded”, “mphantom”, “mroot”, “mrow”, “ms”, “mspace”, “msqrt”, “mstack”, “mstyle”, “msub”, “msubsup”, “msup”, “mtable”, “mtext”, “munder”, “munderover”, “naturalnumbers”, “neq”, “not”, “notanumber”, “notin”, “notprsubset”, “notsubset”, “or”, “outerproduct”, “partialdiff”, “pi”, “piecewise”, “plus”, “power”, “primes”, “product”, “prsubset”, “quotient”, “rationals”, “real”, “reals”, “reln”, “rem”, “root”, “scalarproduct”, “sdev”, “sec”, “sech”, “selector”, “semantics”, “set”, “setdiff”, “share”, “sin”, “sinh”, “subset”, “sum”, “tan”, “tanh”, “tendsto”, “times”, “transpose”, “true”, “union”, “variance”, “vector”, “vectorproduct”, “xor”.",
+        place: "line 7, column 5",
+        extract: "</mi>\\n    </mfrac>\\n  </m"
+      }
+    ]
   }
 ];

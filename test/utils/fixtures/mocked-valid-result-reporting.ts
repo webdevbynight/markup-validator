@@ -266,5 +266,19 @@ export const mockedValidResultReporting: {
         extract: 'ta5">\\n    <rdf:RDF>\\n     '
       }
     ]
+  },
+  {
+    file: `${mockedCwd}/docs/valid.mml`,
+    url: "docs/valid.mml",
+    language: "mathml",
+    result: {
+      version: "26.2.5",
+      messages: []
+    },
+    reporting: {
+      language: "mathml",
+      status: "pass",
+      url: "docs/valid.mml"
+    }
   }
 ];
