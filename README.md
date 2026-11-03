@@ -26,6 +26,14 @@ npm install --save-dev markup-validator
 
 ## Usage
 
+### File extensions
+
+The file extensions recognised by markup-validator are:
+- `.html` and `.htm` for HTML files,
+- `.css` for CSS files,
+- `.svg` for SVG files,
+- `.mml` for MathML files.
+
 ### Options
 
 ##### files
