@@ -68,5 +68,6 @@ export const USER_AGENT = `${WORKSPACE_NAME}/${packageManifest.version} (${packa
 export const EXTENSIONS_PER_LANGUAGE: Record<Language, string[]> = {
   html: [".html", ".htm"],
   css: [".css"],
-  svg: [".svg"]
+  svg: [".svg"],
+  mathml: [".mml"]
 };
