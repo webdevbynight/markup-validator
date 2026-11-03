@@ -6,12 +6,12 @@ export const mockedArgs: { args: string[]; expected: MarkupValidatorOptions }[] 
     expected: {}
   },
   {
-    args: ["--files", "docs/index.html", "docs/styles.css", "docs/icon.svg"],
-    expected: { files: ["docs/index.html", "docs/styles.css", "docs/icon.svg"] }
+    args: ["--files", "docs/index.html", "docs/styles.css", "docs/icon.svg", "docs/formula.mml"],
+    expected: { files: ["docs/index.html", "docs/styles.css", "docs/icon.svg", "docs/formula.mml"] }
   },
   {
-    args: ["-f", "docs/index.html", "docs/styles.css", "docs/icon.svg"],
-    expected: { files: ["docs/index.html", "docs/styles.css", "docs/icon.svg"] }
+    args: ["-f", "docs/index.html", "docs/styles.css", "docs/icon.svg", "docs/formula.mml"],
+    expected: { files: ["docs/index.html", "docs/styles.css", "docs/icon.svg", "docs/formula.mml"] }
   },
   {
     args: ["--paths", "docs", "--exclude", "build", "tmp"],
@@ -22,12 +22,12 @@ export const mockedArgs: { args: string[]; expected: MarkupValidatorOptions }[] 
     expected: { paths: ["docs"], exclude: ["build", "tmp"] }
   },
   {
-    args: ["--languages", "html", "svg"],
-    expected: { languages: ["html", "svg"] }
+    args: ["--languages", "html", "svg", "mathml"],
+    expected: { languages: ["html", "svg", "mathml"] }
   },
   {
-    args: ["-l", "html", "svg"],
-    expected: { languages: ["html", "svg"] }
+    args: ["-l", "html", "svg", "mathml"],
+    expected: { languages: ["html", "svg", "mathml"] }
   },
   {
     args: ["--dry-run"],

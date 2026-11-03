@@ -1,4 +1,4 @@
-export type Language = "html" | "css" | "svg";
+export type Language = "html" | "css" | "svg" | "mathml";
 export type IgnoreLevel = "info" | "warning" | null;
 export type MarkupValidatorOptions = {
   files?: string[];

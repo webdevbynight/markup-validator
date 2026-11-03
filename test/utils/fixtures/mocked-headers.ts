@@ -7,3 +7,6 @@ export const mockedCSSHeaders = {
 export const mockedSVGHeaders = {
   "Content-Type": "image/svg+xml"
 };
+export const mockedMathMLHeaders = {
+  "Content-Type": "application/mathml+xml"
+};

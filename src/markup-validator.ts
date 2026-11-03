@@ -9,6 +9,7 @@ import { getFilesToValidate } from "./utils/get-files-to-validate.js";
 import { prepareReporting } from "./utils/prepare-reporting.js";
 import { CSSValidator } from "./validators/css-validator.js";
 import { HTMLValidator } from "./validators/html-validator.js";
+import { MathMLValidator } from "./validators/mathml-validator.js";
 import { SVGValidator } from "./validators/svg-validator.js";
 
 import { DELAY, EXTENSIONS_PER_LANGUAGE } from "./constants.js";
@@ -57,6 +58,11 @@ export class MarkupValidator {
               }
               case "svg": {
                 const validator = new SVGValidator(content, ignoreLevel);
+                result = await validator.validate();
+                break;
+              }
+              case "mathml": {
+                const validator = new MathMLValidator(content, ignoreLevel);
                 result = await validator.validate();
                 break;
               }

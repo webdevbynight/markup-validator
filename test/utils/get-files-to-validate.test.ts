@@ -16,9 +16,15 @@ const mockedFiles: Record<string, string[]> = {
     "tmp.html",
     "styles.css",
     "index.js",
-    "graphic.svg"
+    "graphic.svg",
+    "formula.mml"
   ],
-  "/fake/path/node_modules/dependency/docs": ["index.html", "styles.css", "graphic.svg"]
+  "/fake/path/node_modules/dependency/docs": [
+    "index.html",
+    "styles.css",
+    "graphic.svg",
+    "formula.mml"
+  ]
 };
 
 vi.mock("node:process", () => ({ cwd: vi.fn(() => mockedCwd) }));
@@ -46,7 +52,8 @@ it("should return all files to validate", async () => {
     `${mockedCwd}/docs/build.html`,
     `${mockedCwd}/docs/tmp.html`,
     `${mockedCwd}/docs/styles.css`,
-    `${mockedCwd}/docs/graphic.svg`
+    `${mockedCwd}/docs/graphic.svg`,
+    `${mockedCwd}/docs/formula.mml`
   ]);
 });
 it("should return all files from `docs` to validate", async () => {
@@ -55,7 +62,8 @@ it("should return all files from `docs` to validate", async () => {
     `${mockedCwd}/docs/build.html`,
     `${mockedCwd}/docs/tmp.html`,
     `${mockedCwd}/docs/styles.css`,
-    `${mockedCwd}/docs/graphic.svg`
+    `${mockedCwd}/docs/graphic.svg`,
+    `${mockedCwd}/docs/formula.mml`
   ]);
 });
 it("should return no files if no valid files to validate are found in paths", async () => {
@@ -65,7 +73,8 @@ it("should return no files from those matching the patterns declared in `exclude
   expect(await getFilesToValidate({ exclude: ["build", "tmp"] })).toEqual([
     `${mockedCwd}/docs/index.html`,
     `${mockedCwd}/docs/styles.css`,
-    `${mockedCwd}/docs/graphic.svg`
+    `${mockedCwd}/docs/graphic.svg`,
+    `${mockedCwd}/docs/formula.mml`
   ]);
 });
 it("should return all HTML files to validate", async () => {
@@ -83,6 +92,11 @@ it("should return all CSS files to validate", async () => {
 it("should return all SVG files to validate", async () => {
   expect(await getFilesToValidate({ languages: ["svg"] })).toEqual([
     `${mockedCwd}/docs/graphic.svg`
+  ]);
+});
+it("should return all MathML files to validate", async () => {
+  expect(await getFilesToValidate({ languages: ["mathml"] })).toEqual([
+    `${mockedCwd}/docs/formula.mml`
   ]);
 });
 it("should return all files from `files` option", async () => {

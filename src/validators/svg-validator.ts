@@ -5,7 +5,7 @@ import { postDocumentUsingRest } from "../utils/post-document-using-rest.js";
 import { W3C_MAIN_VALIDATOR_ENTRY_POINT } from "../constants.js";
 
 /**
- * Validates SVG content using the W3C HTML Validator.
+ * Validates SVG content using the W3C SVG Validator.
  */
 export class SVGValidator {
   private readonly content: string;

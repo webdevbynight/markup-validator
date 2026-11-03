@@ -43,6 +43,9 @@ export const parseArgs = (args: string[]): MarkupValidatorOptions => {
               case "svg":
                 languages.push("svg");
                 break;
+              case "mathml":
+                languages.push("mathml");
+                break;
               default:
                 break;
             }

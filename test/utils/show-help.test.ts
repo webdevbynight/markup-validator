@@ -5,7 +5,7 @@ import { expect, it, vi } from "vitest";
 import { showHelp } from "../../src/utils/show-help.js";
 
 const cliOptions = ["-h", "--help"];
-const expectedOutput = `Checks validity of HTML, CSS and SVG documents
+const expectedOutput = `Checks validity of HTML, CSS, SVG and MathML documents
 
 Usage:
   markup-validator [flags]
