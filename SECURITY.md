@@ -21,12 +21,14 @@ Please report (suspected) security vulnerabilities via [GitHub’s security advi
 During the public disclosure, the reporter can be given credit and a link can be made to any social accounts you wish to see added, including linking to your own blog post detailing the vulnerability.
 
 Please note the following requirements (all are required):
+
 - summary of the suspected vulnerability and its impact (who does this impact and how),
 - information about whether the problem has been patched (and what versions users should upgrade to),
 - description of possible workarounds (if there is a way for users to fix or remediate the vulnerability without upgrading),
 - information about references and any links users can visit to find out more.
 
 Also note the following recommendations to complete the requirements above:
+
 - detailed information as to what the suspected vulnerability does and what it has access to,
 - proof of concept (code samples at minimum, reproduction video optional: POC must include how the vulnerability can actually access sensitive data).
 
@@ -41,5 +43,6 @@ Security vulnerabilities in third-party modules must be reported to the person o
 markup-validator does not support other reporting platforms: all security vulnerabilities must be made via the GitHub Advisory system.
 
 List of some (though not all) platforms **which are not supported:**
+
 - direct e-mail or communication to markup-validator contributors (Discord or Slack),
 - Stack Overflow.
