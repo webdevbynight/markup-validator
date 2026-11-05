@@ -29,11 +29,13 @@ Your pull request will be reviewed and either merged, subject to change requests
 ### Contribution prerequisites
 
 Make sure:
+
 - you have [Node.js](https://nodejs.org/en/) at version 22.12.0+, 24.0.0+ or 26.0.0+,
 - you have [pnpm](https://pnpm.io) at version 11.1.3+ installed,
 - you are familiar with [Git](https://git-scm.com).
 
 **Before submitting your pull request,** make sure the following requirements are fulfilled:
+
 - fork the repository and create your new branch from `main`;
 - install dependencies in the root of the repository;
 - if you have fixed a bug or added code that should be tested, please make sure to add tests;
@@ -76,6 +78,7 @@ Awesome! You are now able to contribute to markup-validator.
 ### Atomic commits
 
 If possible, make [atomic commits](https://en.wikipedia.org/wiki/Atomic_commit), which means:
+
 - a commit should contain exactly one self-contained functional change,
 - a functional change should be contained in exactly one commit,
 - a commit should not create an inconsistent state (such as test errors, linting errors, partial fix, etc.).
@@ -93,6 +96,7 @@ markup-validator uses [commitlint](https://commitlint.js.org) to help you create
 #### Type
 
 The type must be one of the following:
+
 - `build`: when working on the build system or external dependencies (example scope: pnpm),
 - `chore`: when working on tooling,
 - `ci`: when working on CI configuration files and scripts (example scope: GitHub Actions),
@@ -110,6 +114,7 @@ A type ending with `!` introduces breaking changes.
 #### Subject
 
 The subject contains a succinct description of the change:
+
 - use the imperative, present tense (“change”, not “changed” nor “changes”),
 - do not capitalise the first letter,
 - no dot (.) at the end.
@@ -140,6 +145,7 @@ If the type used does not end with `!`, the footer should contain any informatio
 ### Source code
 
 To ensure consistency and quality throughout the source code, all code modifications must have:
+
 - no linting errors,
 - a test for every possible case introduced by your code change,
 - valid commit message(s).

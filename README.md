@@ -16,10 +16,12 @@ Check the markup validity of HTML, CSS, SVG and MathML files using the W3C valid
 ## Installation
 
 Install package for Node.js:
+
 ```
 pnpm add --save-dev markup-validator
 ```
 You can also install it using `npm`:
+
 ```
 npm install --save-dev markup-validator
 ```
@@ -29,6 +31,7 @@ npm install --save-dev markup-validator
 ### File extensions
 
 The file extensions recognised by markup-validator are:
+
 - `.html` and `.htm` for HTML files,
 - `.css` for CSS files,
 - `.svg` for SVG files,
