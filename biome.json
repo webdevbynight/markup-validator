@@ -47,12 +47,7 @@
     "rules": {
       "correctness": {
         "noUnusedImports": "error",
-        "noUnusedVariables": {
-          "level": "error",
-          "options": {
-            "ignoreRestSiblings": true
-          }
-        }
+        "noUnusedVariables": "error"
       },
       "style": {
         "noParameterAssign": "error",
