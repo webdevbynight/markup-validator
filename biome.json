@@ -71,7 +71,6 @@
   },
   "json": {
     "parser": {
-      "allowComments": false,
       "allowTrailingCommas": false
     }
   },
