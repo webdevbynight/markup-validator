@@ -69,11 +69,6 @@
       "trailingCommas": "none"
     }
   },
-  "json": {
-    "parser": {
-      "allowTrailingCommas": false
-    }
-  },
   "css": {
     "formatter": {
       "enabled": false
